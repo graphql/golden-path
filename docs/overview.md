@@ -3,35 +3,19 @@ title: GraphQL Golden Path
 slug: /
 ---
 
-The GraphQL Golden Path is a draft guide for people designing and implementing
-GraphQL systems.
+The GraphQL Golden Path is a guide for people designing and implementing GraphQL
+software. It outlines an opinionated set of practices to be implemented by
+servers, clients, tooling and schema designers such that consumers can "walk the
+golden path" and have the greatest chance of success in their usage of GraphQL.
 
-It is organized so visitors can enter based on their role, then apply the
-practices and patterns most relevant to that role.
-
-## Terminology
-
-- **Organization**: the entity using GraphQL to deliver experiences to
-  employees, constituents, partners, or customers. This includes businesses,
-  nonprofits, government agencies, and similar institutions.
-- **Community**: the broader GraphQL ecosystem of clients, servers, tooling,
-  documentation, and other off-the-shelf resources.
-
-### Organization implementers
-
-- **Schema designer**: designs and evolves the GraphQL schema and resolvers to
-  meet organizational and application needs.
-- **Application developer**: consumes the schema to build applications (web,
-  mobile, desktop, backend).
-
-### Community implementers
-
-- **Server**: an off-the-shelf library or framework that exposes a GraphQL
-  schema.
-- **Client**: an off-the-shelf library or framework that executes operations and
-  exposes results to application code.
-- **Tooling**: supporting tools such as linters, schema diffing, codegen,
-  language servers, and IDE integrations.
+The Golden Path is a community-maintained resource, lead by the GraphQL
+Technical Steering Committee, that is likely to evolve over time. It is
+motivated by problems that users face whilst using GraphQL, and aims to reduce
+these problems for future users. Sometimes this involves changes to the GraphQL
+specifications itself (for example: `onError: "NULL"`, service capabilities),
+but typically it involves aligning the ecosystem on a set of practices that
+minimize downsides for application developers without requiring them to read
+large amounts of documentation.
 
 ## Model
 
@@ -39,8 +23,9 @@ The content is organized around four concepts:
 
 - **Profiles**: visitor-oriented entrypoints that map role and deployment
   context to recommended practices.
-- **Practices**: default behaviors you should adopt.
-- **Patterns**: concrete implementation approaches used to implement practices.
+- **Practices**: default behaviors you should adopt, one way or another.
+- **Patterns**: concrete implementation approaches that implement one or more
+  practices.
 - **Problems**: failure modes these practices and patterns are intended to
   prevent.
 
@@ -49,11 +34,9 @@ appling one or more patterns for your implementer type.
 
 ## Get started
 
-Go to [Profiles](/profiles) to choose your role and deployment context.
-
-If you are a schema designer, start with consistency and lifecycle controls in
-the schema design profile. If you are a server implementer, choose first-party
-vs third-party API mode.
+The practices you need to implement will differ depending on your role; start by
+picking the [Profile or Profiles](/profiles) that best reflect you or your
+project. You will also find terminology definitions on that page.
 
 ## Status
 
