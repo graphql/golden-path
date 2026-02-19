@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunk_graphql_golden_path=globalThis.webpackChunk_graphql_golden_path||[]).push([[647],{7121(e,a,r){r.r(a),r.d(a,{default:()=>u});r(6540);var l=r(4164),s=r(7559),h=r(5500),n=r(2831),p=r(1656),t=r(4848);function u(e){return(0,t.jsx)(h.e3,{className:(0,l.A)(s.G.wrapper.docsPages),children:(0,t.jsx)(p.A,{children:(0,n.v)(e.route.routes)})})}}}]);
