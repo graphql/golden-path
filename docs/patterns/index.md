@@ -6,6 +6,16 @@ sidebar_position: 3
 
 Implementation approaches that realize one or more practices.
 
+## Schema design and client compatibility
+
+- [Connections](/patterns/connections)
+- [Versionless schema design](/patterns/versionless-schema-design)
+- [Mutation input objects](/patterns/mutation-input-objects)
+- [Mutation payloads](/patterns/mutation-payloads)
+- [Modeled mutation errors](/patterns/modeled-mutation-errors)
+
+## Execution and safety
+
 - [Batch resolvers](/patterns/batch-resolvers)
 - [Batching and caching (DataLoader)](/patterns/batching-caching)
 - [Trusted documents (operation allowlist)](/patterns/trusted-documents)

@@ -2,7 +2,6 @@
 title: Trusted documents (operation allowlist)
 ---
 
-
 Trusted documents allow only pre-registered operations to execute, reducing
 attack surface and enabling predictable performance.
 
@@ -10,12 +9,30 @@ attack surface and enabling predictable performance.
 
 - [Trusted documents](/practices/trusted-documents)
 
-## Applies to
+## Implementer guidance
 
-- GraphQL clients
-- GraphQL servers
-- Gateways and proxies
-- Schema registries and build tooling
+### Client implementer
+
+- Detect trusted-document requirements from endpoint service capabilities.
+- Extract operation documents at build time.
+- Publish operation hashes/documents to the server-side registry.
+- At runtime, send operation ID/hash instead of full document text.
+- Use capability metadata to discover where documents are published and where
+  they are executed.
+- Keep hash algorithm and canonicalization aligned with server expectations.
+
+### Server implementer
+
+- Store and version trusted operations received during publish.
+- Resolve incoming operation IDs to canonical documents.
+- Reject unknown operation IDs by default.
+- Optionally cache parse and validation results keyed by operation ID.
+
+### Tooling implementer
+
+- Provide CI checks that all shipped operations are published.
+- Fail builds when operation IDs are missing or mismatched.
+- Support rollback/revocation workflows for operations.
 
 ## Configuration (suggested defaults)
 
@@ -26,17 +43,11 @@ attack surface and enabling predictable performance.
 | `unknownDocumentBehavior` | `reject`    | Error on unknown IDs.                           |
 | `persistedDocumentStore`  | `required`  | Server-side operation store must be configured. |
 
-## Implementation notes
-
-- Clients upload operations during build or release.
-- Servers accept only a document ID, then look up the stored operation.
-- Maintain a migration path (for example, `mode: hybrid`) for existing traffic.
-
 ## Cautions
 
-- Third-party APIs may need to opt out or run in hybrid mode.
-- Align client and server hash algorithms and canonicalization.
-- Ensure tooling can safely roll back or revoke documents.
+- Third-party APIs may need hybrid rollout modes.
+- Enforce strict canonicalization to avoid hash drift.
+- Plan operational procedures for publish failures and rollback.
 
 ## Problems addressed
 

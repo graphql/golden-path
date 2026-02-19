@@ -51,6 +51,10 @@ appling one or more patterns for your implementer type.
 
 Go to [Profiles](/profiles) to choose your role and deployment context.
 
+If you are a schema designer, start with consistency and lifecycle controls in
+the schema design profile. If you are a server implementer, choose first-party
+vs third-party API mode.
+
 ## Status
 
 This site is a work in progress and not official. Guidance may be incomplete or
