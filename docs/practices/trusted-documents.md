@@ -19,7 +19,8 @@ cached), reduces the need for broad operation cost controls.
 
 ## Solves
 
-- [Request payload size](/problems/request-payload-size)
+- [Request size](/problems/request-size)
+- [Response size](/problems/response-size)
 - [Parse-time denial of service](/problems/parse-dos)
 - [DoS via validation](/problems/validation-dos)
 - [Introspection exposure](/problems/introspection-exposure)

@@ -2,7 +2,6 @@
 title: Validation pagination limits
 ---
 
-
 Enforce page-size and pagination-window bounds during GraphQL validation,
 including argument values supplied through variables.
 
@@ -17,12 +16,12 @@ including argument values supplied through variables.
 
 ## Configuration (suggested defaults)
 
-| Parameter | Default | Notes |
-| --- | --- | --- |
-| `defaultPageSize` | `20` | Used when limit arg is omitted. |
-| `maxPageSize` | `100` | Reject over-limit per-field requests. |
-| `maxPaginationWindow` | `1000` | Reject oversized windows. |
-| `enforcement` | `reject` | Return stable validation errors. |
+| Parameter             | Default  | Notes                                 |
+| --------------------- | -------- | ------------------------------------- |
+| `defaultPageSize`     | `20`     | Used when limit arg is omitted.       |
+| `maxPageSize`         | `100`    | Reject over-limit per-field requests. |
+| `maxPaginationWindow` | `1000`   | Reject oversized windows.             |
+| `enforcement`         | `reject` | Return stable validation errors.      |
 
 ## Implementation notes
 
@@ -39,4 +38,4 @@ including argument values supplied through variables.
 
 - [DoS via runtime execution](/problems/runtime-dos)
 - [Execution cost spikes](/problems/execution-cost)
-- [Request payload size](/problems/request-payload-size)
+- [Response size](/problems/response-size)

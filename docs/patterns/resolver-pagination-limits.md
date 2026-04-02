@@ -2,7 +2,6 @@
 title: Resolver pagination limits
 ---
 
-
 Apply default pagination values and enforce page/window bounds at
 resolver/data-access boundaries.
 
@@ -17,12 +16,12 @@ resolver/data-access boundaries.
 
 ## Configuration (suggested defaults)
 
-| Parameter | Default | Notes |
-| --- | --- | --- |
-| `defaultPageSize` | `20` | Applied if absent in resolver args. |
-| `maxPageSize` | `100` | Upper bound for page-size arguments. |
-| `maxPaginationWindow` | `1000` | Upper bound for overall window arguments. |
-| `enforcement` | `clamp` | One of: `clamp`, `reject`, `warn`. |
+| Parameter             | Default | Notes                                     |
+| --------------------- | ------- | ----------------------------------------- |
+| `defaultPageSize`     | `20`    | Applied if absent in resolver args.       |
+| `maxPageSize`         | `100`   | Upper bound for page-size arguments.      |
+| `maxPaginationWindow` | `1000`  | Upper bound for overall window arguments. |
+| `enforcement`         | `clamp` | One of: `clamp`, `reject`, `warn`.        |
 
 ## Implementation notes
 
@@ -42,4 +41,4 @@ resolver/data-access boundaries.
 
 - [DoS via runtime execution](/problems/runtime-dos)
 - [Execution cost spikes](/problems/execution-cost)
-- [Request payload size](/problems/request-payload-size)
+- [Response size](/problems/response-size)

@@ -2,7 +2,6 @@
 title: Result size limits
 ---
 
-
 Limits the size of responses to avoid large payloads or expensive computation.
 
 ## Practices implemented
@@ -36,4 +35,4 @@ Limits the size of responses to avoid large payloads or expensive computation.
 ## Problems addressed
 
 - [DoS via runtime execution](/problems/runtime-dos)
-- [Request payload size](/problems/request-payload-size)
+- [Response size](/problems/response-size)
