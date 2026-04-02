@@ -4,21 +4,21 @@ slug: /profiles
 sidebar_position: 2
 ---
 
-Profiles are opinionated bundles of practices that we recommend are adopted for
-a particular implementor (schema designer, application developer, server,
-client, tooling), such that consumers downstream of the implementor walk the
-golden path, avoiding common downsides and pitfalls.
+A profile lays out the practices that you (the reader) should address based on
+your role, such that consumers downstream of your software walk the golden path
+and thus avoid common downsides and pitfalls.
 
-Pick the profile that matches your role, then follow the recommended practices
-and patterns.
+Pick the profile that matches your role, then ensure your software/schema
+addresses the practices listed for that profile.
 
 ## Terminology
 
 - **Organization**: the entity using GraphQL to deliver experiences to
   employees, constituents, partners, or customers. This includes businesses,
   nonprofits, government agencies, and similar institutions.
-- **Community**: the broader GraphQL ecosystem of clients, servers, tooling,
-  documentation, and other off-the-shelf resources.
+- **Community**: the broader GraphQL ecosystem of libraries/frameworks/tools
+  (clients, servers, code generators, documentation, IDE integration, and other
+  off-the-shelf resources).
 
 ## Community implementers
 
@@ -38,6 +38,7 @@ into three categories:
 Organizations (businesses, nonprofits, government agencies, and similar
 institutions) generally consume GraphQL software from the community, and are
 thus the beneficiaries of the Golden Path rather than the implementors of it.
+
 That said, schema designers will want to set up application developers for
 success, so they should implement a golden path for them. Application developers
 should follow the path laid out before them, but we include some recommended
