@@ -30,7 +30,6 @@ sizes helps to limit this growth.
 
 - [Validation pagination limits](/patterns/validation-pagination-limits)
 - [Resolver pagination limits](/patterns/resolver-pagination-limits)
-- [Result size limits](/patterns/result-size-limits)
 
 ## Notes
 

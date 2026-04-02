@@ -2,7 +2,6 @@
 title: DoS via runtime execution
 ---
 
-
 Even valid queries can cause excessive runtime work through expensive resolvers
 or large result sets.
 
@@ -24,6 +23,5 @@ Runtime-based DoS is costly to recover from and difficult to diagnose.
 
 - [Validation pagination limits](/patterns/validation-pagination-limits)
 - [Resolver pagination limits](/patterns/resolver-pagination-limits)
-- [Result size limits](/patterns/result-size-limits)
 - [Execution timeouts](/patterns/execution-timeouts)
 - [Query complexity limits](/patterns/query-complexity-limits)
