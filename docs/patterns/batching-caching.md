@@ -2,32 +2,27 @@
 title: Batching and caching (DataLoader)
 ---
 
-
 Collects per-field requests, batches them, and caches results within a request.
 
 ## Practices implemented
 
-- [Batched execution](/practices/batched-execution)
+This is not the recommended pattern for
+[Batched execution](/practices/batched-execution) because it requires developers
+to know about it, opt in, and use it consistently in order to reliably and
+effectively solve the N+1 problem. It's a solid solution and can work well, but
+the golden path focuses on ensuring problems are either solved out of the box or
+the user is directly confronted with them rather than requiring them to discover
+the solutions for themself.
 
 ## Applies to
 
 - GraphQL servers
 - Execution engines and runtimes
 
-## Configuration (suggested defaults)
-
-| Parameter       | Default      | Notes                                           |
-| --------------- | ------------ | ----------------------------------------------- |
-| `enabled`       | `false`      | Prefer batch resolvers as the default strategy. |
-| `cacheScope`    | `perRequest` | Avoid cross-request caching by default.         |
-| `batchSchedule` | `microtask`  | Batch within a single tick.                     |
-| `maxBatchSize`  | `100`        | Bound batch size to avoid spikes.               |
-
 ## Implementation notes
 
-- Create a loader per request and per resource type.
+- Create a loader per request, per resource type.
 - Ensure loaders are used in every resolver that can trigger N+1.
-- Preserve ordering between requested keys and results.
 
 ## Cautions
 

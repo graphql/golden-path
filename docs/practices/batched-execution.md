@@ -24,4 +24,10 @@ execution makes the safe behavior the easiest behavior.
 ## Implementing patterns
 
 - [Batch resolvers](/patterns/batch-resolvers)
-- [Batching and caching (DataLoader)](/patterns/batching-caching)
+- TODO: Planning (e.g. Grafast)
+
+[Batching and caching (DataLoader)](/patterns/batching-caching), when used
+consistently, can also be used to solve this problem. However, it is not
+included as part of the golden path because it requires users to opt-in to its
+usage in each position rather than making it the default experience, and if not
+used consistently can result in small batch sizes and related poor performance.
