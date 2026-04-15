@@ -2,8 +2,8 @@
 title: Cursor Connections
 ---
 
-Cursor Connections provide a consistent contract for paginated lists using edges,
-cursors, and page metadata.
+Cursor Connections provide a consistent contract for paginated lists using
+edges, cursors, and page metadata.
 
 ## Practices implemented
 
@@ -40,5 +40,4 @@ cursors, and page metadata.
 ## Problems addressed
 
 - [Execution cost spikes](/problems/execution-cost)
-- [Over-fetching and under-fetching](/problems/overfetching-underfetching)
 - [DoS via runtime execution](/problems/runtime-dos)

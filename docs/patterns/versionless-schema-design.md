@@ -25,10 +25,6 @@ instead of introducing versioned GraphQL endpoints.
 - Coordinate schema rollout with client release cadence.
 - Keep observability on deprecated field usage and resolver cost.
 
-## Problems addressed
-
-- [Over-fetching and under-fetching](/problems/overfetching-underfetching)
-
 ## Related patterns
 
 These patterns help your schema tolerate future changes, often by giving extra

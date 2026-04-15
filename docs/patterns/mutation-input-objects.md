@@ -22,7 +22,3 @@ validation, and long-term evolution.
 
 - Lint for single-input-argument mutation style.
 - Validate naming conventions for mutation input types.
-
-## Problems addressed
-
-- [Over-fetching and under-fetching](/problems/overfetching-underfetching)

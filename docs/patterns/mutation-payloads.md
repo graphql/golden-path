@@ -25,4 +25,4 @@ metadata remain structured and evolvable.
 
 ## Problems addressed
 
-- [Over-fetching and under-fetching](/problems/overfetching-underfetching)
+- [Under-fetching](/problems/underfetching)

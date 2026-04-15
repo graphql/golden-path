@@ -31,7 +31,8 @@ because tracing down where it is used is too time consuming.
 
 ## Solves
 
-- [Over-fetching and under-fetching](/problems/overfetching-underfetching)
+- [Over-fetching](/problems/overfetching)
+- [Under-fetching](/problems/underfetching)
 
 ## Implementing patterns
 

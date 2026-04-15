@@ -43,4 +43,5 @@ component can only access data that it has requested through its fragments.
 
 ## Problems addressed
 
-- [Over-fetching and under-fetching](/problems/overfetching-underfetching)
+- [Over-fetching](/problems/overfetching)
+- [Under-fetching](/problems/underfetching)
