@@ -2,7 +2,6 @@
 title: Query complexity limits
 ---
 
-
 Complexity limits cap the estimated cost of a query before execution to prevent
 expensive operations from overwhelming systems.
 
@@ -16,13 +15,9 @@ expensive operations from overwhelming systems.
 - Gateways and proxies
 - Observability and security tooling
 
-## Configuration (suggested defaults)
+## Recommended implementation
 
-| Parameter         | Default      | Notes                                            |
-| ----------------- | ------------ | ------------------------------------------------ |
-| `maxComplexity`   | `1000`       | Total allowed cost per operation.                |
-| `complexityModel` | `fieldCount` | Use a simple model as a baseline.                |
-| `listMultiplier`  | `pageSize`   | Multiply cost by pagination argument or default. |
+See: https://ibm.github.io/graphql-specs/cost-spec.html
 
 ## Implementation notes
 
@@ -33,7 +28,7 @@ expensive operations from overwhelming systems.
 ## Cautions
 
 - Keep rules stable across releases to avoid breaking clients.
-- Avoid leaking schema or data in error responses.
+- Avoid leaking precise limits or data in error responses.
 - Ensure the model matches your pagination conventions.
 
 ## Problems addressed
