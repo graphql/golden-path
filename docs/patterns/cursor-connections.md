@@ -13,29 +13,40 @@ edges, cursors, and page metadata.
 
 ### Schema designer
 
-- Expose list fields as connection types for forward/backward pagination.
-- Include stable cursors and `pageInfo` with clear semantics.
-- Define and enforce bounded pagination arguments (`first`/`last`, optional
-  cursor args).
+- Expose data collections as connection types for forward (and ideally backward)
+  cursor pagination and schema extensibility.
+- Use stable cursors.
+- You may add use-case specific extensions to the connection, pageInfo, and
+  edges - for example a "members" connection might include details on edges of
+  membership start date.
+- The `nodes` field can be used as a shortcut to `edges`&rarr;`node` for user
+  convenience. When this pattern is followed, `PageInfo` must include
+  `startCursor` and `endCursor` to enable cursor pagination.
 
 ### Client implementer
 
 - Detect connection shapes and provide ergonomic pagination APIs.
-- Encourage fragment reuse so page 2+ operations stay structurally aligned with
-  page 1.
+- Page 2+ should use a separate focussed operation that re-uses the connection
+  field/fragment but omits sibling data fetches.
 - Hide cursor plumbing behind high-level pagination helpers where possible.
+- Prefer hard-coding pagination limits into the document rather than using
+  variables.
 
 ### Tooling implementer
 
-- Lint for required connection elements (`edges/node/cursor/pageInfo`).
-- Lint for required and bounded pagination arguments.
-- Optionally enforce static page-size values in trusted document workflows.
+- Lint should discourage list fields with pagination arguments, preferring
+  connections.
+- Lint should assert any object type whose name ends with `Connection` must
+  implement the cursor connections specification.
+- Require each document has provided a pagination limit (`first` or `last`)
+  either statically (preferred) or via a variable.
 
 ### Server implementer
 
 - Require pagination limits and reject unbounded requests.
 - Ensure cursor decoding/encoding is stable and opaque.
 - Keep ordering deterministic for repeatable pagination.
+- Treat cursors as untrusted user input and implement your own validation.
 
 ## Problems addressed
 
