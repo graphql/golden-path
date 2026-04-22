@@ -2,8 +2,8 @@
 title: Mutation input objects
 ---
 
-Define each mutation with a single, typed input object to improve consistency,
-validation, and long-term evolution.
+Define each mutation with a single, typed input object to enable clients to pass
+a single variable that enables easier evolution.
 
 ## Implementer guidance
 
