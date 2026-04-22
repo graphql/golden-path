@@ -20,5 +20,5 @@ Exposure increases attack surface and can reveal internal structure.
 
 ## Patterns that address this
 
-- [Introspection controls](/patterns/introspection-controls)
+- [Disabling introspection](/patterns/disabling-introspection)
 - [Trusted documents (allowlist)](/patterns/trusted-documents)

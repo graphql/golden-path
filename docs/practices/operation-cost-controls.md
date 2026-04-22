@@ -69,4 +69,4 @@ expensive "trusted" documents.
 - [Query complexity limits](/patterns/query-complexity-limits)
 - [Depth limits](/patterns/depth-limits)
 - [Token limits](/patterns/token-limits)
-- [Introspection controls](/patterns/introspection-controls)
+- [Disabling introspection](/patterns/disabling-introspection)
