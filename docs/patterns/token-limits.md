@@ -2,8 +2,8 @@
 title: Token limits
 ---
 
-Limit the number of lexer/parser tokens in a GraphQL document before full parse
-or validation.
+Limit the number of lexer/parser tokens in a GraphQL document during parse to
+prevent excessively complex validation.
 
 ## Practices implemented
 
@@ -17,16 +17,18 @@ or validation.
 
 ## Configuration (suggested defaults)
 
-| Parameter | Default | Notes |
-| --- | --- | --- |
-| `maxTokens` | `15000` | Maximum tokens allowed for application operations. |
-| `maxIntrospectionTokens` | `30000` | Higher allowance for introspection documents. |
-| `onLimitExceeded` | `reject` | One of: `reject`, `warn`. |
+| Parameter         | Default  | Notes                                               |
+| ----------------- | -------- | --------------------------------------------------- |
+| `maxTokens`       | `5000`   | Maximum tokens allowed for application operations.  |
+| `onLimitExceeded` | `reject` | One of: `reject`, `warn`.                           |
+| `ignoreIgnored`   | `true`   | Ignored tokens don't make validation more expensive |
 
 ## Implementation notes
 
 - Count tokens from the lexer stream before expensive parse/validation phases.
-- Enforce separate token ceilings for application and introspection operations.
+- Ignored tokens (comments, commas, whitespace, etc) can be ignored, they may
+  increase memory usage linearly but should not have significant impact on
+  validation duration.
 - Return stable error codes/messages so users can tune limits safely.
 
 ## Cautions
