@@ -34,3 +34,8 @@ appropriate.
 ## Implementing patterns
 
 - [Cursor Connections](/patterns/cursor-connections)
+
+## Notes
+
+- Clients and servers should provide first-class pagination primitives for
+  connection fields.
