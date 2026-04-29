@@ -22,7 +22,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "benjaie",
+  organizationName: "graphql",
   projectName: "golden-path",
   deploymentBranch: "gh-pages",
   trailingSlash: true,
@@ -80,7 +80,7 @@ const config: Config = {
         { to: "/solutions", label: "Solutions", position: "left" },
         { to: "/problems", label: "Problems", position: "left" },
         {
-          href: "https://github.com/benjaie/golden-path",
+          href: "https://github.com/graphql/golden-path",
           label: "GitHub",
           position: "right",
         },
